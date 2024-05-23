@@ -1,3 +1,15 @@
+/* VARIABLES */
+:root {
+  --color-white: #fff;
+  --slate-blue: #2b363b;
+
+  --animation-fade-in-1s: fade-in 1s;
+
+  --circle-position-y: 11.5%;
+  --circle-position-x: 10.4%;
+  --circle-position-x-580: 9.8%;
+}
+
 /* RESET */
 * {
   margin: 0;
@@ -71,7 +83,7 @@ button {
 .app {
   font-family: "Lato", san-serif;
   font-size: 15px;
-  color: #fff;
+  color: var(--color-white);
   height: 100vh;
   width: 100vw;
 }
@@ -105,7 +117,7 @@ button {
 
 .dd-toggle:hover,
 .dd-toggle:focus {
-  color: #fff;
+  color: var(--color-white);
   background-color: rgba(255, 255, 255, 0.07);
 }
 
@@ -156,14 +168,14 @@ button {
 
 .menu__button:hover,
 .menu__button:focus {
-  background-color: #2b363b;
-  color: #fff;
+  background-color: var(--slate-blue);
+  color: var(--color-white);
   cursor: pointer;
 }
 
 .menu__button--active {
-  background-color: #2b363b;
-  color: #fff;
+  background-color: var(--slate-blue);
+  color: var(--color-white);
   position: relative;
 }
 
@@ -202,7 +214,7 @@ button {
 /* --------------------------------------------- */
 
 .panel {
-  background-color: #2b363b;
+  background-color: var(--slate-blue);
   width: 350px;
   padding: 15px 31px;
 }
@@ -239,23 +251,23 @@ button {
   border-radius: 7px;
   cursor: pointer;
   transition: all 0.2s;
-  animation: fade-in 1s;
+  animation: var(--animation-fade-in-1s);
 }
 
 .panel__img:nth-child(2) {
-  animation: fade-in 1s 0.15s backwards;
+  animation: var(--animation-fade-in-1s) 0.15s backwards;
 }
 
 .panel__img:nth-child(3) {
-  animation: fade-in 1s 0.3s backwards;
+  animation: var(--animation-fade-in-1s) 0.3s backwards;
 }
 
 .panel__img:nth-child(4) {
-  animation: fade-in 1s 0.45s backwards;
+  animation: var(--animation-fade-in-1s) 0.45s backwards;
 }
 
 .panel__img:nth-child(5) {
-  animation: fade-in 1s 0.6s backwards;
+  animation: var(--animation-fade-in-1s) 0.6s backwards;
 }
 
 .panel__img:hover {
@@ -269,7 +281,7 @@ button {
   background-color: #333e44;
   cursor: pointer;
   transition: all 0.2s;
-  animation: fade-in 1s 0.6s backwards;
+  animation: var(--animation-fade-in-1s) 0.6s backwards;
 }
 
 .panel__btn:hover,
@@ -291,7 +303,7 @@ button {
 
 .info-bar {
   height: 50px;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-bottom: 1px solid #d6dde1;
   padding: 0 30px;
   display: flex;
@@ -348,7 +360,7 @@ button {
   height: 57.5vh;
   width: 48.6vw;
   position: relative;
-  border: 1px solid #fff;
+  border: 1px solid var(--color-white);
   border-radius: 3px;
 }
 
@@ -368,7 +380,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid #fff;
+  border: 1px solid var(--color-white);
   cursor: grab;
   animation: make-smaller 1s 0.2s backwards;
 }
@@ -377,32 +389,32 @@ button {
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--color-white);
   position: absolute;
-  animation: fade-in 1s 1s backwards;
+  animation: var(--animation-fade-in-1s) 1s backwards;
 }
 
 .canvas__circle:nth-of-type(1) {
-  top: 11.5%;
-  left: 10.4%;
+  top: var(--circle-position-y);
+  left: var(--circle-position-x);
   cursor: nw-resize;
 }
 
 .canvas__circle:nth-of-type(2) {
-  top: 11.5%;
-  right: 10.4%;
+  top: var(--circle-position-y);
+  right: var(--circle-position-x);
   cursor: ne-resize;
 }
 
 .canvas__circle:nth-of-type(3) {
-  bottom: 11.5%;
-  left: 10.4%;
+  bottom: var(--circle-position-y);
+  left: var(--circle-position-x);
   cursor: sw-resize;
 }
 
 .canvas__circle:nth-of-type(4) {
-  bottom: 11.5%;
-  right: 10.4%;
+  bottom: var(--circle-position-y);
+  right: var(--circle-position-x);
   cursor: se-resize;
 }
 
@@ -425,8 +437,8 @@ button {
 }
 
 .tool--active {
-  background-color: #2b363b;
-  color: #fff;
+  background-color: var(--slate-blue);
+  color: var(--color-white);
 }
 
 .tool:last-child {
@@ -435,8 +447,8 @@ button {
 
 .tool:hover,
 .tool:focus {
-  background-color: #2b363b;
-  color: #fff;
+  background-color: var(--slate-blue);
+  color: var(--color-white);
 }
 
 .tool__icon {
@@ -499,23 +511,23 @@ button {
   }
 
   .canvas__circle:nth-of-type(1) {
-    top: 11.5%;
-    left: 9.8%;
+    top: var(--circle-position-y);
+    left: var(--circle-position-x-580);
   }
 
   .canvas__circle:nth-of-type(2) {
-    top: 11.5%;
-    right: 9.8%;
+    top: var(--circle-position-y);
+    right: var(--circle-position-x-580);
   }
 
   .canvas__circle:nth-of-type(3) {
-    bottom: 11.5%;
-    left: 9.8%;
+    bottom: var(--circle-position-y);
+    left: var(--circle-position-x);
   }
 
   .canvas__circle:nth-of-type(4) {
-    bottom: 11.5%;
-    right: 9.8%;
+    bottom: var(--circle-position-y);
+    right: var(--circle-position-x);
   }
 
   .tools {
